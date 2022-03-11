@@ -1,4 +1,10 @@
 """
+What do client when they create an account?
+they have client_id
+account_id
+first_name
+last_name
+account_number
 """
 
 

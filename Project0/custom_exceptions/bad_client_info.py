@@ -1,0 +1,2 @@
+class BadClientInfo(Exception):
+    pass

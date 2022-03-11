@@ -5,6 +5,7 @@ from custom_exceptions.bad_account_info import BadAccountInfo
 from custom_exceptions.id_not_found import IdNotFound
 from dal_layer.account_dao.account_doa_imp import AccountDAOImp
 from entities.account_class_information import Account
+from entities.withdraw_class_information import Withdraw
 from service_layer.account_services.account_service_imp import AccountServiceImp
 
 """
@@ -75,7 +76,7 @@ def create_account():
 
 
 @app.route("/teams/<id>", methods=["GET"])
-def get_account_by_id(id: str):
+def get_account_by_id(id: int):
     try:
         result: Account = account_service.service_get_account_by_id(id)
         result_dictionary = result.convert_to_dictionary()
